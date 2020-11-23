@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angualr-nest-auth"
+  "defaultProject": "angualr-nest-auth",
+  "cli": {
+    "analytics": "625bbc65-3b17-4c40-9741-a319dfdec699"
+  }
 }
