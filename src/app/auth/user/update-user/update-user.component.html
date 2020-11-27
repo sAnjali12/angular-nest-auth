@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+<form (submit)="updateUser()">
+  <fieldset class="account-info">
+      <div class="form-group">
+        <label>
+          username
+        <input type="text" name="username" [(ngModel)]="user.username" class="form-control" autofocus>
+    </label>
+    </div>
+    <div class="form-group">
+      <label>
+        password
+      <input type="text" name="password" [(ngModel)]="user.password" class="form-control">
+  </label>
+  </div>
+  </fieldset>
+  <fieldset class="account-action">
+    <input class="btn" type="submit" name="save" value="save">
+  </fieldset>
+</form>

@@ -60,7 +60,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
     cursor:pointer;
   }
-  
+  .alert-alert-info{ 
+    border: 10mm;
+    background-position: center;
+  }
   /*Media Querie*/
   @media only screen and (min-width : 110px) and (max-width : 53px){
     .login-form h3 {

@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+
+<html>
+    <body >    
+    <div class="container">
+        <img src="https://networknuts.net/wp-content/uploads/2019/11/zahir-accounting-software-have-more-than-60.000-users.png" align="left">
+      <form  [formGroup]="user" (submit)= "submitProduct()" >
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" name="username" formControlName="username" class="form-control" placeholder="User name..">
+        </div>
+
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="text" name="password"  formControlName="password" class="form-control" placeholder="Password..">  
+        </div>
+        <input type="submit" value="Save">
+      </form>
+    </div>
+    
+    </body>
+</html>

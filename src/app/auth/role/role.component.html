@@ -1,0 +1,34 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+
+<h1 class='center'>
+  Roles
+</h1>
+
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/activerole">ActiveRelation</a>
+    <a class="active" href="/diactiverole">DiActiveRelation</a>
+    <a><button [routerLink]="'/createrole'" class="button">Create Role</button></a>
+  </div>
+</div> 
+
+<table class='center'>
+  <th>Name</th>
+  <th>DisplayName</th>
+  <th>Description</th>
+  <tr *ngFor = "let role of role">
+    <td>{{role.name}}</td>
+    <td>{{role.displayName}}</td>
+    <td>{{role.description}}</td>
+  <button><td (click)="deleterole(role.id)" class='btn'>DELETE</td></button>
+  <button><td [routerLink]="['/updaterole', role.id]" class="bt">EDIT</td></button>
+    <!-- <td>[routerLink] = "['/updateProduct', role.id]">UPDATE</td> -->
+  </tr>
+</table>
+

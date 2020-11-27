@@ -1,0 +1,22 @@
+<h1 class='center'>
+    User Role Relations..
+</h1>
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+  
+  <table class='center'>
+    <th>UserId</th>
+    <th>RoleId</th>
+    <th>IsDelete</th>
+    <tr *ngFor = "let relation of relation">
+      <td *ngIf = "relation.isDeleted == true">{{relation.userId}}</td>
+      <td *ngIf = "relation.isDeleted == true">{{relation.roleId}}</td>
+      <td *ngIf = "relation.isDeleted == true">{{relation.isDeleted}}</td>
+    </tr>
+  </table>
+  

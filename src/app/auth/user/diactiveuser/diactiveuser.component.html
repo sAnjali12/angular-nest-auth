@@ -1,0 +1,17 @@
+<div class="header">
+    <div class="header-right">
+      <a class="active" href="/user">Users</a>
+      <a class="active" href="/role">Roles</a>
+      <a class="active" href="/relation">Relations</a>
+    </div>
+</div>
+  
+  <table class='center'>
+    <th>UserName</th>
+    <th colspan="1">IsDelete</th>
+    <tr *ngFor = "let user of user">
+      <td  *ngIf = "user.isDeleted==true">{{user.username}}</td>
+      <td *ngIf = "user.isDeleted==true">{{user.isDeleted}}</td>
+    </tr>
+  </table>
+  

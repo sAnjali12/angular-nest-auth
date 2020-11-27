@@ -1,0 +1,32 @@
+
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+
+<h1 class='center'>
+  Users
+</h1>
+
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/activeuser">ActiveRelation</a>
+    <a class="active" href="/diactiveuser">DiActiveRelation</a>
+    <a><button [routerLink]="'/createuser'" class="button">Create User</button></a>
+  </div>
+</div>
+
+<table class='center'>
+  <th>UserId</th>
+  <th>UserName</th>
+  <tr *ngFor = "let user of user">
+    <td>{{user.id}}</td>
+    <td>{{user.username}}</td>
+  <button><td (click) = "deleteuser(user.id)" class="btn">DELETE</td></button>
+  <button><td [routerLink]="['/updateuser', user.id]" class="bt">EDIT</td></button>
+  </tr>
+</table>
+

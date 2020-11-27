@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="header-right">
+      <a class="active" href="/user">Users</a>
+      <a class="active" href="/role">Roles</a>
+      <a class="active" href="/relation">Relations</a>
+    </div>
+</div>
+  
+  <table class='center'>
+    <th>Name</th>
+    <th>DisplayName</th>
+    <th>Description</th>
+    <th colspan="1">IsDelete</th>
+    <tr *ngFor = "let role of role">
+      <td *ngIf ="role.isDeleted == false">{{role.name}}</td>
+      <td *ngIf ="role.isDeleted == false">{{role.displayName}}</td>
+      <td *ngIf ="role.isDeleted == false">{{role.description}}</td>
+      <td *ngIf ="role.isDeleted == false">{{role.isDeleted}}</td>
+    </tr>
+  </table>
+  
+  

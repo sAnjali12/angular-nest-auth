@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+
+<form  [formGroup]="role" (submit)= "submitRole()" >
+    <fieldset class="account-info">
+      <label>
+        name
+        <input type="text" name="name" formControlName="name">
+      </label>
+      <label>
+        displayName
+        <input type="text" name="displayName" formControlName="displayName">
+      </label>
+      <label>
+        description
+        <input type="text" name="description" formControlName="description">
+      </label>
+    </fieldset>
+    <fieldset class="account-action">
+      <input class="btn" type="submit" name="save" value="save">
+    </fieldset>
+  </form>

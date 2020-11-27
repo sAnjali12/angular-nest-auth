@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+<h1 class='center'>
+  User Role Relations..
+</h1>
+
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/activerelation">ActiveRelation</a>
+    <a class="active" href="/diactiverelation">DiActiveRelation</a>
+    <a><button [routerLink]="'/createrelation'" class="button">Create Relation</button></a>
+  </div>
+</div>
+  
+  <table class='center'>
+    <th>UserId</th>
+    <th>RoleId</th>
+    <tr *ngFor = "let relation of relation">
+      <td>{{relation.userId}}</td>
+      <td>{{relation.roleId}}</td> 
+    <button><td (click) = "deleterelation(relation.id)" class="btn">DELETE</td></button>
+    </tr>
+  </table>
+  

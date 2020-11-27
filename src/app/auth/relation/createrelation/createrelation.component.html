@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="header-right">
+    <a class="active" href="/user">Users</a>
+    <a class="active" href="/role">Roles</a>
+    <a class="active" href="/relation">Relations</a>
+  </div>
+</div>
+
+<form  [formGroup]="relation" (submit)= "submitRelation()" >
+    <fieldset class="account-info">
+      <label>
+        UserId
+        <input type="text" name="userId" formControlName="userId">
+      </label>
+      <label>
+        RoleId
+        <input type="text" name="roleId" formControlName="roleId">
+      </label>
+    </fieldset>
+    <fieldset class="account-action">
+      <input class="btn" type="submit" name="save" value="save">
+    </fieldset>
+  </form>
