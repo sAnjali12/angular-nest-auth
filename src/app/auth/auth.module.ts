@@ -31,25 +31,9 @@ import { DiactiveroleComponent } from './role/diactiverole/diactiverole.componen
 import { ActiveroleComponent } from './role/activerole/activerole.component';
 import { ActiverelationComponent } from './relation/activerelation/activerelation.component';
 import { DiactiverelationComponent } from './relation/diactiverelation/diactiverelation.component';
+import { AuthRoutingModule } from './auth-router.module';
 
-const routes:Routes=[
-    {path:'login',component:LoginComponent},
-    {path:'home',component:HomeComponent},
-    {path:'user',component:UserComponent},
-    {path:'role',component:RoleComponent},
-    {path:'relation',component:RelationComponent},
-    {path:'updateuser/:id',component:UpdateUserComponent},
-    {path:'createuser',component:CreateUserComponent},
-    {path:'createrole',component:CreateRoleComponent},
-    {path:'updaterole/:id',component:UpdateRoleComponent},
-    {path:'createrelation',component:CreaterelationComponent},
-    {path:'activeuser',component:ActiveuserComponent},
-    {path:'diactiveuser',component:DiactiveuserComponent},
-    {path:'activerole',component:ActiveroleComponent},
-    {path:'diactiverole',component:DiactiveroleComponent},
-    {path:'activerelation',component:ActiverelationComponent},
-    {path:'diactiverelation',component:DiactiverelationComponent}
-  ]
+
 
 @NgModule({
   declarations: [
@@ -77,7 +61,7 @@ const routes:Routes=[
   
   ],
   imports: [
-    RouterModule.forRoot(routes),
+    AuthRoutingModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
